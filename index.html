@@ -1,91 +1,89 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
-<style type="text/css">
-form fieldset {
-   margin: 10px auto 10px auto;
-   width: 40%;
-   border: solid black 1px;
-   padding: 3%;
-}
-
-form legend {
-   padding: 6px;
-   margin: 10px;
-   border: solid black 1px;
-   font-size: 90%;
-   font-weight: bold;
-   background-color: #e8e8e8;
-}
-
-form label {
-   display: block;
-   font-size: 11px;
-}
-
-form input {
-   width: 100%;
-   border: solid #ccc 1px;
-   font-size: 11px;
-   margin-bottom: 10px;
-}
-
-form input.botao {
-   display: block;
-   width: auto;
-   float: right;
-}
-</style>
-
 <script type="text/javascript">
-function calcular(oper) {
-   var valor1 = document.calcform.valor1.value;
-   var valor2 = document.calcform.valor2.value;
 
-   if (oper == "somar") {
-      var res = parseInt(valor1) + parseInt(valor2);
-   } else {
-      if (oper == "subtrair") {
-         var res = valor1-valor2;
-      } else {
-         if (oper == "multiplicar") {
-            var res = valor1*valor2;
-         } else {
-            var res = valor1/valor2;
-         }
-      }
+function myFunction() {
+   var a = 0;
+   var b = 0;
+   var c = 0;
+   var res= "";
+   if(document.getElementById("r4_1").checked){
+		a++;
+   }else{
+		b++;
    }
-
-   document.calcform.res.value = res;
+  
+  if(document.getElementById("r5_1").checked){
+		a++;
+   }else{
+		b++;
+   }
+  
+  if(document.getElementById("r6_1").checked){
+		c++;
+   }else{
+		b++;
+   }
+   
+  document.getElementById("demo1").innerHTML = a;
+  document.getElementById("demo2").innerHTML = b;
+  document.getElementById("demo3").innerHTML = c;
+  
+  if(a>c){
+    res+="P";
+  }else{
+	res+="C";
+  }
+  
+  if(b>c){
+	res+="E";
+  }else{
+	res+="V";
+  }
+  
+  if(a>b){
+	res+="I";
+  }else{
+	res+="E";
+  }
+ 
+ document.getElementById("res").innerHTML = res;
+   
 }
-</script>
 
+</script>
 </head>
 <body>
+  <p>4:</p>
+  <input type="radio" id="r4_1" name="r4" value="a">
+  <label for="male"> Às vezes, sou inseguro ao meu respeito.</label><br>
+  <input type="radio" id="r4_2" name="r4" value="b" checked>
+  <label for="female">Às vezes, confio demais em mim mesmo.</label><br>
+  <br>  
 
-<form name="calcform" method="post" action="">
-   <fieldset>
-      <legend>Devin - Calculadora Simples</legend>
+  <p>5:</p>
+  <input type="radio" id="r5_1" name="r5" value="a" checked>
+  <label for="male">Gosto quando meu ritmo de vida é rápido, intenso e excitante.</label><br>
+  <input type="radio" id="r5_2" name="r5" value="b">
+  <label for="female">Gosto quando a minha vida não é corrida, mas estável e tranquila.</label><br>
+  <br>  
 
-      <label for="valor1">Digite o valor <strong>1</strong>:</label>
-      <input type="text" name="valor1" id="valor1" />
+  <p>6:</p>
+  <input type="radio" id="r6_1" name="r6" value="c">
+  <label for="male"> Prefiro reconhecimento público a reconhecimento particular.</label><br>
+  <input type="radio" id="r6_2" name="r6" value="b" checked>
+  <label for="female">Prefiro reconhecimento particular a reconhecimento público.</label><br>
+  <br>  
 
-      <label for="valor2">Digite o valor <strong>2</strong>:</label>
-      <input type="text" name="valor2" id="valor2" />
+  <button onclick="myFunction()">Try it</button>
 
-      <label for="oper">Selecione a operação:</label>
-      <select name="oper" id="oper">
-         <option value="somar">Somar</option>
-         <option value="subtrair">Subtrair</option>
-         <option value="multiplicar">Multiplifcar</option>
-         <option value="dividir">Dividir</option>
-      </select>
-
-      <label for="res">Resultado:</label>
-      <input type="text" name="res" id="res" />
-
-      <input type="button" value="Calcular" class="botao" onClick="calcular(document.calcform.oper.value)"/>
-   </fieldset>
-</form>
+<p>qtd de respostas A= <b id="demo1"></b></p>
+<p>qtd de respostas B= <b id="demo2"></b></p>
+<p>qtd de respostas C= <b id="demo3"></b></p>
+<br> 
+ 
+<p>SEU TIPO DE DNA MOTIVACIONAL É= <b id="res"></b></p>
+ 
 </body>
 </html>
