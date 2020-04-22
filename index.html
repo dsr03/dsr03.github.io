@@ -7,28 +7,124 @@ function myFunction() {
    var a = 0;
    var b = 0;
    var c = 0;
+   var d = 0;
+   var e = 0;
+   var f = 0;
    var res= "";
-   if(document.getElementById("r4_1").checked){
-		a++;
-   }else{
-		b++;
-   }
-  
-  if(document.getElementById("r5_1").checked){
-		a++;
-   }else{
-		b++;
-   }
-  
-  if(document.getElementById("r6_1").checked){
+   
+   if(document.getElementById("r1_1").checked){
 		c++;
    }else{
+		a++;
+   }  
+   if(document.getElementById("r2_1").checked){
+		f++;
+   }else{
+		d++;
+   }  
+   if(document.getElementById("r3_1").checked){
+		e++;
+   }else{
 		b++;
    }
+   if(document.getElementById("r4_1").checked){
+		c++;
+   }else{
+		a++;
+   }  
+   if(document.getElementById("r5_1").checked){
+		f++;
+   }else{
+		d++;
+   }  
+   if(document.getElementById("r6_1").checked){
+		e++;
+   }else{
+		b++;
+   }
+   if(document.getElementById("r7_1").checked){
+		d++;
+   }else{
+		f++;
+   }  
+   if(document.getElementById("r8_1").checked){
+		a++;
+   }else{
+		c++;
+   }  
+   if(document.getElementById("r9_1").checked){
+		e++;
+   }else{
+		b++;
+   }
+   if(document.getElementById("r10_1").checked){
+		c++;
+   }else{
+		a++;
+   }  
+   if(document.getElementById("r11_1").checked){
+		e++;
+   }else{
+		b++;
+   }  
+   if(document.getElementById("r12_1").checked){
+		d++;
+   }else{
+		f++;
+   }
+   if(document.getElementById("r13_1").checked){
+		a++;
+   }else{
+		c++;
+   }  
+   if(document.getElementById("r14_1").checked){
+		f++;
+   }else{
+		d++;
+   }  
+   if(document.getElementById("r15_1").checked){
+		b++;
+   }else{
+		e++;
+   }
+   if(document.getElementById("r16_1").checked){
+		c++;
+   }else{
+		a++;
+   }  
+   if(document.getElementById("r17_1").checked){
+		d++;
+   }else{
+		f++;
+   }  
+   if(document.getElementById("r18_1").checked){
+		e++;
+   }else{
+		b++;
+   }
+   if(document.getElementById("r19_1").checked){
+		a++;
+   }else{
+		c++;
+   }
+   if(document.getElementById("r20_1){
+		e++;
+   }else{
+		b++;
+   }
+   if(document.getElementById("r21_1").checked){
+		f++;
+   }else{
+		d++;
+   }
+   
    
   document.getElementById("demo1").innerHTML = a;
   document.getElementById("demo2").innerHTML = b;
   document.getElementById("demo3").innerHTML = c;
+  document.getElementById("demo4").innerHTML = d;
+  document.getElementById("demo5").innerHTML = e;
+  document.getElementById("demo6").innerHTML = f;
   
   if(a>c){
     res+="P";
@@ -36,13 +132,13 @@ function myFunction() {
 	res+="C";
   }
   
-  if(b>c){
+  if(d>f){
 	res+="E";
   }else{
 	res+="V";
   }
   
-  if(a>b){
+  if(b>e){
 	res+="I";
   }else{
 	res+="E";
@@ -224,6 +320,9 @@ procedimentos sejam seguidos.</label><br>
 <p>qtd de respostas A= <b id="demo1"></b></p>
 <p>qtd de respostas B= <b id="demo2"></b></p>
 <p>qtd de respostas C= <b id="demo3"></b></p>
+<p>qtd de respostas D= <b id="demo4"></b></p>
+<p>qtd de respostas E= <b id="demo5"></b></p>
+<p>qtd de respostas F= <b id="demo6"></b></p>
 <br> 
  
 <p>SEU TIPO DE DNA MOTIVACIONAL É= <b id="res"></b></p>
