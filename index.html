@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
+    <title>DNA Motivacional</title>
 	
 <script type="text/javascript">
 
@@ -128,23 +128,23 @@ function myFunction() {
    }
    
    
-  document.getElementById("demo1").innerHTML = a;
-  document.getElementById("demo2").innerHTML = b;
-  document.getElementById("demo3").innerHTML = c;
-  document.getElementById("demo4").innerHTML = d;
-  document.getElementById("demo5").innerHTML = e;
-  document.getElementById("demo6").innerHTML = f;
+  //document.getElementById("demo1").innerHTML = a;
+  //document.getElementById("demo2").innerHTML = b;
+  //document.getElementById("demo3").innerHTML = c;
+  //document.getElementById("demo4").innerHTML = d;
+  //document.getElementById("demo5").innerHTML = e;
+  //document.getElementById("demo6").innerHTML = f;
   
   if(a>c){
-    res+="P";
+    	res+="P.";
   }else{
-	res+="C";
+	res+="C.";
   }
   
   if(d>f){
-	res+="E";
+	res+="E.";
   }else{
-	res+="V";
+	res+="V.";
   }
   
   if(b>e){
@@ -326,17 +326,38 @@ procedimentos sejam seguidos.</label><br>
   <br>  
   <br> 
 
-	<p align="center"><button type="button" class="btn btn-success btn-lg" onclick="myFunction()">RESULTADO</button></p>
+	<p align="center"><button type="button" class="btn btn-success btn-lg" onclick="myFunction()" data-toggle="modal" data-target="#exampleModal">RESULTADO</button></p>
 
-<p>qtd de respostas A= <b id="demo1"></b></p>
-<p>qtd de respostas B= <b id="demo2"></b></p>
-<p>qtd de respostas C= <b id="demo3"></b></p>
-<p>qtd de respostas D= <b id="demo4"></b></p>
-<p>qtd de respostas E= <b id="demo5"></b></p>
-<p>qtd de respostas F= <b id="demo6"></b></p>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Resultado</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        	<p>SEU TIPO DE DNA MOTIVACIONAL É= <b id="res"></b></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        
+      </div>
+    </div>
+  </div>
+</div>	
+	
+	
+<!-- <p>qtd de respostas A= <b id="demo1"></b></p>-->
+<!-- <p>qtd de respostas B= <b id="demo2"></b></p>-->
+<!-- <p>qtd de respostas C= <b id="demo3"></b></p>-->
+<!-- <p>qtd de respostas D= <b id="demo4"></b></p>-->
+<!-- <p>qtd de respostas E= <b id="demo5"></b></p>-->
+<!-- <p>qtd de respostas F= <b id="demo6"></b></p>-->
 <br> 
  
-<p>SEU TIPO DE DNA MOTIVACIONAL É= <b id="res"></b></p>
  
 	
 	
