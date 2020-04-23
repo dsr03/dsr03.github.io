@@ -1,0 +1,212 @@
+[
+    [
+        {
+            "resposta": "Sou uma pessoa amigável, que apoia os outros e que procura intimidade com elas.",
+            "valor": "c"
+        },
+        {
+            "resposta": "Sou uma pessoa preocupada com as conquistas, procuro ser bem-sucedido",
+            "valor": "a"
+        }
+    ],
+    [
+        {
+            "resposta": "Tendo a ser espontâneo e gosto de arriscar.",
+            "valor": "f"
+        },
+        {
+            "resposta": "Tendo a ser metódico e cauteloso.",
+            "valor": "d"
+        }
+    ],
+    [
+        {
+            "resposta": "Quero ser recompensado por meu excelente trabalho.",
+            "valor": "e"
+        },
+        {
+            "resposta": "Preciso de um trabalho que seja importante para mim.",
+            "valor": "b"
+        }
+    ],
+    [
+        {
+            "resposta": " Às vezes, sou inseguro ao meu respeito.",
+            "valor": "c"
+        },
+        {
+            "resposta": "Às vezes, confio demais em mim mesmo.",
+            "valor": "a"
+        }
+    ],
+    [
+        {
+            "resposta": "Gosto quando meu ritmo de vida é rápido, intenso e excitante.",
+            "valor": "f"
+        },
+        {
+            "resposta": "Gosto quando a minha vida não é corrida, mas estável e tranquila.",
+            "valor": "d"
+        }
+    ],
+    [
+        {
+            "resposta": " Prefiro reconhecimento público a reconhecimento particular.",
+            "valor": "e"
+        },
+        {
+            "resposta": "Prefiro reconhecimento particular a reconhecimento público.",
+            "valor": "b"
+        }
+    ],
+    [
+        {
+            "resposta": "Sou cuidadoso e tento estar pronto para imprevistos.",
+            "valor": "d"
+        },
+        {
+            "resposta": "Sou criativo e prefiro improvisar quando os problemas aparecem.",
+            "valor": "f"
+        }
+    ],
+    [
+        {
+            "resposta": "Na maioria das vezes, gosto de liderar.",
+            "valor": "a"
+        },
+        {
+            "resposta": "Na maioria das vezes, prefiro que os outros liderem.",
+            "valor": "c"
+        }
+    ],
+    [
+        {
+            "resposta": "Sempre busquei um trabalho que tivesse potencial considerável de sucesso financeiro e reconhecimento pessoal.",
+            "valor": "e"
+        },
+        {
+            "resposta": "Abriria mão de compensação financeira e reconhecimento pessoal para ter um trabalho que faça uma grande e positiva diferença.",
+            "valor": "b"
+        }
+    ],
+    [
+        {
+            "resposta": "Basicamente, sou tranquilo aberto e flexível.",
+            "valor": "c"
+        },
+        {
+            "resposta": "Basicamente, sou acelerado, assertivo e confiante",
+            "valor": "a"
+        }
+    ],
+    [
+        {
+            "resposta": "Conseguir as melhores coisas da vida é extremamente importante para mim.",
+            "valor": "e"
+        },
+        {
+            "resposta": "Conseguir as melhores coisas da vida não é importante para mim.",
+            "valor": "b"
+        }
+    ],
+    [
+        {
+            "resposta": "Sou geralmente concentrado e disciplinado.",
+            "valor": "d"
+        },
+        {
+            "resposta": "Sou geralmente impulsivo e ousado.",
+            "valor": "f"
+        }
+    ],
+    [
+        {
+            "resposta": "Eu faço acontecer.",
+            "valor": "a"
+        },
+        {
+            "resposta": "O que tiver de ser será.",
+            "valor": "c"
+        }
+    ],
+    [
+        {
+            "resposta": "Não gosto de lidar com detalhes.",
+            "valor": "f"
+        },
+        {
+            "resposta": "Gosto de lidar com detalhes.",
+            "valor": "d"
+        }
+    ],
+    [
+        {
+            "resposta": "Deixar uma contribuição para a humanidade é importante para mim.",
+            "valor": "b"
+        },
+        {
+            "resposta": "Conseguir riqueza e respeito é importante para mim.",
+            "valor": "e"
+        }
+    ],
+    [
+        {
+            "resposta": "Prefiro me encaixar a me destacar.",
+            "valor": "c"
+        },
+        {
+            "resposta": "Prefiro me descartar a me encaixar.",
+            "valor": "a"
+        }
+    ],
+    [
+        {
+            "resposta": "Estou interessado em manter minha estabilidade e paz de espírito.",
+            "valor": "d"
+        },
+        {
+            "resposta": "Estou interessado em me desafiar, fazendo coisas novas.",
+            "valor": "f"
+        }
+    ],
+    [
+        {
+            "resposta": "Em relação a um novo emprego, salário e benefícios são primordiais.",
+            "valor": "e"
+        },
+        {
+            "resposta": "Em relação a um novo emprego, a função em si é primordial.",
+            "valor": "b"
+        }
+    ],
+    [
+        {
+            "resposta": "Gosto de desafiar a ordem das coisas e sacudir as estruturas.",
+            "valor": "a"
+        },
+        {
+            "resposta": "Gosto de confortar as pessoas e acalmá-las.",
+            "valor": "c"
+        }
+    ],
+    [
+        {
+            "resposta": "Os que os outros pensam de mim é muito importante.",
+            "valor": "e"
+        },
+        {
+            "resposta": "Desde que eu esteja sendo verdadeiro comigo mesmo, não me importo com que os outros pensam de mim.",
+            "valor": "b"
+        }
+    ],
+    [
+        {
+            "resposta": "Uma das minhas maiores virtudes é lançar novas ideais e com elas entusiasmar as pessoas.",
+            "valor": "f"
+        },
+        {
+            "resposta": "Uma das minhas maiores virtudes é implementar e assegurar que os procedimentos sejam seguidos.",
+            "valor": "d"
+        }
+    ]
+]
