@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- Required meta tags -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+	<title>DNA Motivacional</title>
+
+	<script type="text/javascript">
+
+		function myFunction() {
+			var a = 0;
+			var b = 0;
+			var c = 0;
+			var d = 0;
+			var e = 0;
+			var f = 0;
+			var res = "";
+			var sigla = "";
+
+			if (document.getElementById("r1_1").checked) {
+				c++;
+			} else {
+				a++;
+			}
+			if (document.getElementById("r2_1").checked) {
+				f++;
+			} else {
+				d++;
+			}
+			if (document.getElementById("r3_1").checked) {
+				e++;
+			} else {
+				b++;
+			}
+			if (document.getElementById("r4_1").checked) {
+				c++;
+			} else {
+				a++;
+			}
+			if (document.getElementById("r5_1").checked) {
+				f++;
+			} else {
+				d++;
+			}
+			if (document.getElementById("r6_1").checked) {
+				e++;
+			} else {
+				b++;
+			}
+			if (document.getElementById("r7_1").checked) {
+				d++;
+			} else {
+				f++;
+			}
+			if (document.getElementById("r8_1").checked) {
+				a++;
+			} else {
+				c++;
+			}
+			if (document.getElementById("r9_1").checked) {
+				e++;
+			} else {
+				b++;
+			}
+			if (document.getElementById("r10_1").checked) {
+				c++;
+			} else {
+				a++;
+			}
+			if (document.getElementById("r11_1").checked) {
+				e++;
+			} else {
+				b++;
+			}
+			if (document.getElementById("r12_1").checked) {
+				d++;
+			} else {
+				f++;
+			}
+			if (document.getElementById("r13_1").checked) {
+				a++;
+			} else {
+				c++;
+			}
+			if (document.getElementById("r14_1").checked) {
+				f++;
+			} else {
+				d++;
+			}
+			if (document.getElementById("r15_1").checked) {
+				b++;
+			} else {
+				e++;
+			}
+			if (document.getElementById("r16_1").checked) {
+				c++;
+			} else {
+				a++;
+			}
+			if (document.getElementById("r17_1").checked) {
+				d++;
+			} else {
+				f++;
+			}
+			if (document.getElementById("r18_1").checked) {
+				e++;
+			} else {
+				b++;
+			}
+			if (document.getElementById("r19_1").checked) {
+				a++;
+			} else {
+				c++;
+			}
+			if (document.getElementById("r20_1").checked) {
+				e++;
+			} else {
+				b++;
+			}
+			if (document.getElementById("r21_1").checked) {
+				f++;
+			} else {
+				d++;
+			}
+
+
+			//document.getElementById("demo1").innerHTML = a;
+			//document.getElementById("demo2").innerHTML = b;
+			//document.getElementById("demo3").innerHTML = c;
+			//document.getElementById("demo4").innerHTML = d;
+			//document.getElementById("demo5").innerHTML = e;
+			//document.getElementById("demo6").innerHTML = f;
+
+			if (a > c) {
+				res += "P.";
+				sigla += "Produtor, ";
+			} else {
+				res += "C.";
+				sigla += "Conector, ";
+			}
+
+			if (d > f) {
+				res += "E.";
+				sigla += "Estabilizador, ";
+			} else {
+				res += "V.";
+				sigla += "Variador, ";
+			}
+
+			if (b > e) {
+				res += "I";
+				sigla += "Interiorizador";
+			} else {
+				res += "E";
+				sigla += "Exteriorizador";
+			}
+
+			document.getElementById("res").innerHTML = sigla + " = " + res;
+			
+			/*
+			Recupear input com respostas e transformar para arquivo json
+			*/
+			let perguntas = [];
+			let respostas = [];
+			$("div.row p").each(function (i) {
+				
+				for (let index = 0; index < 2; index++) {
+					respostas.push({
+						"resposta": $(this).find("label")[index].textContent,
+						"valor": $(this).find("input[type='radio']")[index].value
+					});
+				}
+				perguntas.push(JSON.stringify(respostas));
+				
+				respostas = [];
+				
+			});
+
+			$.post( "post.php", { 'perguntas[]': perguntas },"json");
+
+		}
+
+	</script>
+</head>
+
+<body>
+	<div class="container">
+		<div class="row_asd">
+			<h1 align="center">Desejo Necessidade Agraciação – DNA Motivacional</h1>
+			<br><br>
+			<p>Este teste consiste em 21 pares de afirmativas que determinarão seu tipo motivacional básico. Em
+				cada par, escolha a afirmativa que melhor descreve a forma como tem agido na maior parte de sua vida.
+				Coloque um X no espaço em branco á direita da afirmativa que você escolheu. Às vezes, você pode achar
+				que ambas as afirmativas servem para você, mas, se fosse obrigado a escolher uma das duas, qual delas
+				reflete melhor seus comportamentos e pensamentos? Se refletir com cuidado, descobrirá que uma das
+				afirmativas tem sido mais verdadeira para você que a outra. É melhor não analisar demais suas escolhas.
+				Os resultados serão mais precisos se responder espontaneamente em vez de ficar analisando demais suas
+				respostas.</p>
+		</div>
+		<div class="row">
+			<p>
+				1:
+				<br>
+				<input type="radio" id="r1_1" name="r1" value="c">
+				<label for="r1_1">Sou uma pessoa amigável, que apoia os outros e que procura intimidade com
+					elas.</label>
+				<br>
+				<input type="radio" id="r1_2" name="r1" value="a" checked>
+				<label for="r1_2">Sou uma pessoa preocupada com as conquistas, procuro ser bem-sucedido</label>
+			</p>
+		</div>
+		<div class="row">
+			<p>
+				2:
+				<br>
+				<input type="radio" id="r2_1" name="r2" value="f" checked>
+				<label for="r2_1">Tendo a ser espontâneo e gosto de arriscar.</label>
+				<br>
+				<input type="radio" id="r2_2" name="r2" value="d">
+				<label for="r2_2">Tendo a ser metódico e cauteloso.</label>
+			</p>
+		</div>
+		<div class="row">
+			<p>3:<br>
+				<input type="radio" id="r3_1" name="r3" value="e">
+				<label for="r3_1">Quero ser recompensado por meu excelente trabalho.</label><br>
+				<input type="radio" id="r3_2" name="r3" value="b" checked>
+				<label for="r3_2">Preciso de um trabalho que seja importante para mim.</label></p>
+		</div>
+		<div class="row">
+			<p>4:<br>
+				<input type="radio" id="r4_1" name="r4" value="c">
+				<label for="r4_1"> Às vezes, sou inseguro ao meu respeito.</label><br>
+				<input type="radio" id="r4_2" name="r4" value="a" checked>
+				<label for="r4_2">Às vezes, confio demais em mim mesmo.</label></p>
+		</div>
+		<div class="row">
+			<p>5:<br>
+				<input type="radio" id="r5_1" name="r5" value="f" checked>
+				<label for="r5_1">Gosto quando meu ritmo de vida é rápido, intenso e excitante.</label><br>
+				<input type="radio" id="r5_2" name="r5" value="d">
+				<label for="r5_2">Gosto quando a minha vida não é corrida, mas estável e tranquila.</label></p>
+		</div>
+		<div class="row">
+			<p>6:<br>
+				<input type="radio" id="r6_1" name="r6" value="e">
+				<label for="r6_1"> Prefiro reconhecimento público a reconhecimento particular.</label><br>
+				<input type="radio" id="r6_2" name="r6" value="b" checked>
+				<label for="r6_2">Prefiro reconhecimento particular a reconhecimento público.</label></p>
+		</div>
+		<div class="row">
+			<p>7:<br>
+				<input type="radio" id="r7_1" name="r7" value="d">
+				<label for="r7_1">Sou cuidadoso e tento estar pronto para imprevistos.</label><br>
+				<input type="radio" id="r7_2" name="r7" value="f" checked>
+				<label for="r7_2">Sou criativo e prefiro improvisar quando os problemas aparecem.</label></p>
+		</div>
+		<div class="row">
+			<p>8:<br>
+				<input type="radio" id="r8_1" name="r8" value="a" checked>
+				<label for="r8_1">Na maioria das vezes, gosto de liderar.</label><br>
+				<input type="radio" id="r8_2" name="r8" value="c">
+				<label for="r8_2">Na maioria das vezes, prefiro que os outros liderem.</label></p>
+		</div>
+		<div class="row">
+			<p>9:<br>
+				<input type="radio" id="r9_1" name="r9" value="e">
+				<label for="r9_1">Sempre busquei um trabalho que tivesse potencial considerável de sucesso
+					financeiro e reconhecimento pessoal.</label><br>
+				<input type="radio" id="r9_2" name="r9" value="b" checked>
+				<label for="r9_2">Abriria mão de compensação financeira e reconhecimento pessoal para ter
+					um trabalho que faça uma grande e positiva diferença.</label></p>
+		</div>
+		<div class="row">
+			<p>10:<br>
+				<input type="radio" id="r10_1" name="r10" value="c">
+				<label for="r10_1">Basicamente, sou tranquilo aberto e flexível.</label><br>
+				<input type="radio" id="r10_2" name="r10" value="a" checked>
+				<label for="r10_2">Basicamente, sou acelerado, assertivo e confiante</label></p>
+		</div>
+		<div class="row">
+			<p>11:<br>
+				<input type="radio" id="r11_1" name="r11" value="e">
+				<label for="r11_1">Conseguir as melhores coisas da vida é extremamente importante para mim.</label><br>
+				<input type="radio" id="r11_2" name="r11" value="b" checked>
+				<label for="r11_2">Conseguir as melhores coisas da vida não é importante para mim.</label></p>
+		</div>
+		<div class="row">
+			<p>12:<br>
+				<input type="radio" id="r12_1" name="r12" value="d" checked>
+				<label for="r12_1">Sou geralmente concentrado e disciplinado.</label><br>
+				<input type="radio" id="r12_2" name="r12" value="f">
+				<label for="r12_2">Sou geralmente impulsivo e ousado.</label></p>
+		</div>
+		<div class="row">
+			<p>13:<br>
+				<input type="radio" id="r13_1" name="r13" value="a">
+				<label for="r13_1">Eu faço acontecer.</label><br>
+				<input type="radio" id="r13_2" name="r13" value="c" checked>
+				<label for="r13_2">O que tiver de ser será.</label></p>
+		</div>
+		<div class="row">
+			<p>14:<br>
+				<input type="radio" id="r14_1" name="r14" value="f">
+				<label for="r14_1">Não gosto de lidar com detalhes.</label><br>
+				<input type="radio" id="r14_2" name="r14" value="d" checked>
+				<label for="r14_2">Gosto de lidar com detalhes.</label></p>
+		</div>
+		<div class="row">
+			<p>15:<br>
+				<input type="radio" id="r15_1" name="r15" value="b" checked>
+				<label for="r15_1">Deixar uma contribuição para a humanidade é importante para mim.</label><br>
+				<input type="radio" id="r15_2" name="r15" value="e">
+				<label for="r15_2">Conseguir riqueza e respeito é importante para mim.</label></p>
+		</div>
+		<div class="row">
+			<p>16:<br>
+				<input type="radio" id="r16_1" name="r16" value="c">
+				<label for="r16_1">Prefiro me encaixar a me destacar.</label><br>
+				<input type="radio" id="r16_2" name="r16" value="a" checked>
+				<label for="r16_2">Prefiro me descartar a me encaixar.</label></p>
+		</div>
+		<div class="row">
+			<p>17:<br>
+				<input type="radio" id="r17_1" name="r17" value="d">
+				<label for="r17_1">Estou interessado em manter minha estabilidade e paz de espírito.</label><br>
+				<input type="radio" id="r17_2" name="r17" value="f" checked>
+				<label for="r17_2">Estou interessado em me desafiar, fazendo coisas novas.</label></p>
+		</div>
+		<div class="row">
+			<p>18:<br>
+				<input type="radio" id="r18_1" name="r18" value="e" checked>
+				<label for="r18_1">Em relação a um novo emprego, salário e benefícios são primordiais.</label><br>
+				<input type="radio" id="r18_2" name="r18" value="b">
+				<label for="r18_2">Em relação a um novo emprego, a função em si é primordial.</label></p>
+		</div>
+		<div class="row">
+			<p>19:<br>
+				<input type="radio" id="r19_1" name="r19" value="a">
+				<label for="r19_1">Gosto de desafiar a ordem das coisas e sacudir as estruturas.</label><br>
+				<input type="radio" id="r19_2" name="r19" value="c" checked>
+				<label for="r19_2">Gosto de confortar as pessoas e acalmá-las.</label></p>
+		</div>
+		<div class="row">
+			<p>20:<br>
+				<input type="radio" id="r20_1" name="r20" value="e">
+				<label for="r20_1">Os que os outros pensam de mim é muito importante.</label><br>
+				<input type="radio" id="r20_2" name="r20" value="b" checked>
+				<label for="r20_2">Desde que eu esteja sendo verdadeiro comigo mesmo, não me importo com
+					que os outros pensam de mim.</label></p>
+		</div>
+		<div class="row">
+			<p>21:<br>
+				<input type="radio" id="r21_1" name="r21" value="f">
+				<label for="r21_1">Uma das minhas maiores virtudes é lançar novas ideais e com elas
+					entusiasmar as pessoas.</label><br>
+				<input type="radio" id="r21_2" name="r21" value="d" checked>
+				<label for="r21_2">Uma das minhas maiores virtudes é implementar e assegurar que os
+					procedimentos sejam seguidos.</label></p>
+		</div>
+		<div class="row">
+			<div class="col text-center">
+				<button type="button" class="btn btn-success btn-lg" onclick="myFunction()" data-toggle="modal"
+					data-target="#exampleModal">RESULTADO</button>
+			</div>
+		</div>
+
+	</div>
+	<!-- Modal -->
+	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+		aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Resultado</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<p>SEU TIPO DE DNA MOTIVACIONAL É:<br> <b id="res"></b></p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- <p>qtd de respostas A= <b id="demo1"></b></p>-->
+	<!-- <p>qtd de respostas B= <b id="demo2"></b></p>-->
+	<!-- <p>qtd de respostas C= <b id="demo3"></b></p>-->
+	<!-- <p>qtd de respostas D= <b id="demo4"></b></p>-->
+	<!-- <p>qtd de respostas E= <b id="demo5"></b></p>-->
+	<!-- <p>qtd de respostas F= <b id="demo6"></b></p>-->
+	<br>
+
+
+
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+		crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+		crossorigin="anonymous"></script>
+</body>
+
+</html>
