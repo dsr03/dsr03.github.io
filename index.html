@@ -20,6 +20,7 @@ function myFunction() {
    var e = 0;
    var f = 0;
    var res= "";
+   var sigla= "";
    
    if(document.getElementById("r1_1").checked){
 		c++;
@@ -137,23 +138,29 @@ function myFunction() {
   
   if(a>c){
     	res+="P.";
+	  sigla+="Produtor, ";
   }else{
 	res+="C.";
+	  sigla+="Conector, ";
   }
   
   if(d>f){
 	res+="E.";
+	  sigla+="Estabilizador, ";
   }else{
 	res+="V.";
+	  sigla+="Variador, ";
   }
   
   if(b>e){
 	res+="I";
+	  sigla+="Interiorizador";
   }else{
 	res+="E";
+	  sigla+="Exteriorizador";
   }
  
- document.getElementById("res").innerHTML = res;
+ document.getElementById("res").innerHTML = sigla + " = " + res;
    
 }
 
@@ -339,7 +346,7 @@ procedimentos sejam seguidos.</label><br>
         </button>
       </div>
       <div class="modal-body">
-        	<p>SEU TIPO DE DNA MOTIVACIONAL É= <b id="res"></b></p>
+        	<p>SEU TIPO DE DNA MOTIVACIONAL É:<br> <b id="res"></b></p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
